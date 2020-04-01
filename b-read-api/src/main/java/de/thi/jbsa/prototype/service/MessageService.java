@@ -1,13 +1,22 @@
 package de.thi.jbsa.prototype.service;
 
-import org.springframework.stereotype.Service;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.java.Log;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
 
 @Service
+@Log
 public class MessageService {
 
+  public List<String> history = new ArrayList<>();
+
   @Getter
-  @Setter
-  private String message;
+  private String message ;
+
+  public void setMessage(String input){
+    this.message += input + ",";
+  }
 }
