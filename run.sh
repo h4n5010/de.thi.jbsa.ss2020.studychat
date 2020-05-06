@@ -1,1 +1,1 @@
-./gradlew build jibDockerBuild; docker-compose up -d
+./gradlew build jibDockerBuild --stacktrace; docker-compose up -d
